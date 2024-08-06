@@ -26,6 +26,7 @@ class ClientPrefs {
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
+	public static var cacheOnGPU:Bool = false;
 	public static var hideTime:Bool = false;
 	public static var oldvoice:Bool = false;
 	public static var mainweek:Bool = false;
@@ -64,6 +65,7 @@ class ClientPrefs {
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
+		FlxG.save.data.cacheOnGPU = cacheOnGPU;
 		FlxG.save.data.framerate = framerate;
 		//FlxG.save.data.cursing = cursing;
 		//FlxG.save.data.violence = violence;
@@ -121,16 +123,29 @@ class ClientPrefs {
 		if(FlxG.save.data.lowQuality != null) {
 			lowQuality = FlxG.save.data.lowQuality;
 		}
-		if(FlxG.save.data.framerate != null) {
-			framerate = FlxG.save.data.framerate;
-			if(framerate > FlxG.drawFramerate) {
-				FlxG.updateFramerate = framerate;
-				FlxG.drawFramerate = framerate;
-			} else {
-				FlxG.drawFramerate = framerate;
-				FlxG.updateFramerate = framerate;
-			}
+
+		if(FlxG.save.data.cacheOnGPU != null) {
+			cacheOnGPU = FlxG.save.data.cacheOnGPU;
 		}
+		
+                if(FlxG.save.data.framerate != null) {
+			framerate = FlxG.save.data.framerate;
+		}
+		#if !html5
+		else
+		{
+			final refreshRate:Int = FlxG.stage.application.window.displayMode.refreshRate;
+			framerate = Std.int(FlxMath.bound(refreshRate, 60, 240));
+		}
+		#end
+		if(framerate > FlxG.drawFramerate) {
+			FlxG.updateFramerate = framerate;
+			FlxG.drawFramerate = framerate;
+		} else {
+			FlxG.drawFramerate = framerate;
+			FlxG.updateFramerate = framerate;
+		}
+		
 		/*if(FlxG.save.data.cursing != null) {
 			cursing = FlxG.save.data.cursing;
 		}
