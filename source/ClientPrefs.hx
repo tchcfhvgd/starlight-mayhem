@@ -5,6 +5,7 @@ import flixel.util.FlxSave;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
+import flixel.math.FlxMath;
 
 class ClientPrefs {
 	public static var downScroll:Bool = false;
