@@ -4360,8 +4360,8 @@ songSpeed = SONG.speed;
 						{
 								FlxTransitionableState.skipNextTransIn = false;
 								FlxTransitionableState.skipNextTransOut = false;
-										var video:VideoHandlerMP4 = new VideoHandlerMP4();
-										video.playMP4(Paths.video('final_cutscene'));
+										var video:MP4Handler = new MP4Handler();
+										video.playVideo(Paths.video('final_cutscene'));
 										video.finishCallback = function()
 										{
 											FlxG.sound.playMusic(Paths.music('freakyMenu'));
