@@ -123,7 +123,7 @@ jobs:
            path: /home/runner
 
       - name: Move Android File
-        run: mv /home/runner/Starlight Mayhem-release.apk /home/runner/PsychEngine-Android.apk
+        run: mv /home/runner/Starlight Mayhem-release.apk /home/runner/Starlight Mayhem-Android.apk
 
       - name: Publish The Release
         uses: marvinpinto/action-automatic-releases@latest
