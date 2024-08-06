@@ -97,6 +97,14 @@ class Main extends Sprite
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
 
+		FlxG.signals.preStateSwitch.add(function () {
+				Paths.clearStoredMemory(true);
+				FlxG.bitmap.dumpCache();
+		});
+		FlxG.signals.postStateSwitch.add(function () {
+			Paths.clearUnusedMemory();
+		});
+		
 		#if html5
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
