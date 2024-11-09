@@ -1,29 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="burstshine.png">
-	<!-- Created with Adobe Animate version 21.0.7.42652 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="burst shine0000" x="3" y="3" width="1461" height="793" frameX="0" frameY="0" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0001" x="3" y="3" width="1461" height="793" frameX="0" frameY="0" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0002" x="1468" y="3" width="1461" height="792" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0003" x="1468" y="3" width="1461" height="792" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0004" x="2933" y="3" width="1461" height="793" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0005" x="2933" y="3" width="1461" height="793" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0006" x="4398" y="3" width="1461" height="793" frameX="0" frameY="-2" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0007" x="4398" y="3" width="1461" height="793" frameX="0" frameY="-2" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0008" x="5863" y="3" width="1461" height="793" frameX="0" frameY="-3" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0009" x="5863" y="3" width="1461" height="793" frameX="0" frameY="-3" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0010" x="3" y="800" width="1461" height="792" frameX="0" frameY="-4" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0011" x="3" y="800" width="1461" height="792" frameX="0" frameY="-4" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0012" x="1468" y="800" width="1461" height="793" frameX="0" frameY="-4" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0013" x="1468" y="800" width="1461" height="793" frameX="0" frameY="-4" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0014" x="2933" y="800" width="1461" height="792" frameX="0" frameY="-4" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0015" x="2933" y="800" width="1461" height="792" frameX="0" frameY="-4" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0016" x="4398" y="800" width="1461" height="792" frameX="0" frameY="-3" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0017" x="4398" y="800" width="1461" height="792" frameX="0" frameY="-3" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0018" x="5863" y="800" width="1461" height="792" frameX="0" frameY="-2" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0019" x="5863" y="800" width="1461" height="792" frameX="0" frameY="-2" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0020" x="3" y="1597" width="1461" height="792" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0021" x="3" y="1597" width="1461" height="792" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0022" x="1468" y="1597" width="1461" height="792" frameX="0" frameY="-1" frameWidth="1461" frameHeight="797"/>
-	<SubTexture name="burst shine0023" x="3" y="3" width="1461" height="793" frameX="0" frameY="0" frameWidth="1461" frameHeight="797"/>
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="burst shine0000" x="0" y="0" width="1460" height="373" frameX="0" frameY="-420" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0001" x="0" y="0" width="1460" height="373" frameX="0" frameY="-420" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0002" x="1460" y="1489" width="1460" height="372" frameX="0" frameY="-421" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0003" x="1460" y="1489" width="1460" height="372" frameX="0" frameY="-421" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0004" x="0" y="745" width="1460" height="372" frameX="0" frameY="-422" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0005" x="0" y="745" width="1460" height="372" frameX="0" frameY="-422" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0006" x="1460" y="1117" width="1460" height="372" frameX="0" frameY="-423" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0007" x="1460" y="1117" width="1460" height="372" frameX="0" frameY="-423" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0008" x="1460" y="372" width="1460" height="372" frameX="0" frameY="-424" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0009" x="1460" y="372" width="1460" height="372" frameX="0" frameY="-424" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0010" x="0" y="1489" width="1460" height="372" frameX="0" frameY="-424" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0011" x="0" y="1489" width="1460" height="372" frameX="0" frameY="-424" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0012" x="1460" y="0" width="1460" height="372" frameX="0" frameY="-425" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0013" x="1460" y="0" width="1460" height="372" frameX="0" frameY="-425" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0014" x="0" y="1861" width="1460" height="372" frameX="0" frameY="-424" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0015" x="0" y="1861" width="1460" height="372" frameX="0" frameY="-424" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0016" x="0" y="1117" width="1460" height="372" frameX="0" frameY="-423" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0017" x="0" y="1117" width="1460" height="372" frameX="0" frameY="-423" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0018" x="0" y="373" width="1460" height="372" frameX="0" frameY="-422" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0019" x="0" y="373" width="1460" height="372" frameX="0" frameY="-422" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0020" x="1460" y="1861" width="1460" height="372" frameX="0" frameY="-421" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0021" x="1460" y="1861" width="1460" height="372" frameX="0" frameY="-421" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0022" x="1460" y="744" width="1460" height="372" frameX="0" frameY="-421" frameWidth="1461" frameHeight="797"/>
+	<SubTexture name="burst shine0023" x="0" y="0" width="1460" height="373" frameX="0" frameY="-420" frameWidth="1461" frameHeight="797"/>
 </TextureAtlas>
