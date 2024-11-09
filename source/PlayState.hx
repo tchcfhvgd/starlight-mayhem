@@ -54,6 +54,11 @@ import DialogueBoxPsych;
 import sys.FileSystem;
 #end
 
+#if hxvlc
+import hxvlc.flixel.*;
+import hxvlc.util.*;
+#end
+
 using StringTools;
 
 class PlayState extends MusicBeatState
@@ -1745,52 +1750,46 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String):Void {
+    public function startVideo(name:String)
+	{
 		#if VIDEOS_ALLOWED
-		var foundFile:Bool = false;
-		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+		inCutscene = true;
+
+		var filepath:String = Paths.video(name);
 		#if sys
-		if(FileSystem.exists(fileName)) {
-			foundFile = true;
-		}
+		if(!FileSystem.exists(filepath))
+		#else
+		if(!OpenFlAssets.exists(filepath))
 		#end
-
-		if(!foundFile) {
-			fileName = Paths.video(name);
-			#if sys
-			if(FileSystem.exists(fileName)) {
-			#else
-			if(OpenFlAssets.exists(fileName)) {
-			#end
-				foundFile = true;
-			}
-		}
-
-		if(foundFile) {
-			inCutscene = true;
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-			bg.scrollFactor.set();
-			bg.cameras = [camHUD];
-			add(bg);
-
-			(new FlxVideo(fileName)).finishCallback = function() {
-				remove(bg);
-				if(endingSong) {
-					endSong();
-				} else {
-					startCountdown();
-				}
-			}
+		{
+			FlxG.log.warn('Couldnt find video file: ' + name);
+			startAndEnd();
 			return;
-		} else {
-			FlxG.log.warn('Couldnt find video file: ' + fileName);
 		}
+
+		var video:FlxVideo = new FlxVideo();
+		video.load(filepath);
+		video.play();
+		video.onEndReached.add(function()
+		{
+			video.dispose();
+			startAndEnd();
+			return;
+		}, true);
+
+		#else
+		FlxG.log.warn('Platform not supported!');
+		startAndEnd();
+		return;
 		#end
-		if(endingSong) {
+	}
+
+	function startAndEnd()
+	{
+		if(endingSong)
 			endSong();
-		} else {
+		else
 			startCountdown();
-		}
 	}
 
 	var dialogueCount:Int = 0;
@@ -4348,15 +4347,19 @@ songSpeed = SONG.speed;
 						{
 								FlxTransitionableState.skipNextTransIn = false;
 								FlxTransitionableState.skipNextTransOut = false;
-										var video:VideoHandlerMP4 = new VideoHandlerMP4();
-										video.playMP4(Paths.video('final_cutscene'));
-										video.finishCallback = function()
-										{
+									
+	   var video:FlxVideo = new FlxVideo();
+		video.load(Paths.video('final_cutscene'));
+		video.play();		
+	    video.onEndReached.add(function()
+	      {
+		  video.dispose();
 											FlxG.sound.playMusic(Paths.music('freakyMenu'));
 											MusicBeatState.switchState(new StoryMenuState());
 											ClientPrefs.mainweek = true;
 											FlxG.save.data.beatenweek1 = true;
-										}
+		  return;			
+		  }, true);
 						}
 						else
 						{
