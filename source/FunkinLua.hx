@@ -561,8 +561,8 @@ class FunkinLua {
 			}
 			lePlayState.addCharacterToList(name, charType);
 		});
-		Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
-			Paths.addCustomGraphic(name);
+	        Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
+			Paths.image(name);
 		});
 		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
 			CoolUtil.precacheSound(name);
