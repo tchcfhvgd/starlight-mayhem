@@ -323,11 +323,6 @@ class PlayState extends MusicBeatState
 	var doof2:Cutsceneshit;
 	override public function create()
 	{
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages(resetSpriteCache);
-		#end
-		resetSpriteCache = false;
-
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
